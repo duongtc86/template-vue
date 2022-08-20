@@ -1,0 +1,123 @@
+html {
+  font-size: 16px !important;
+}
+#page_pro {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: 9999999;
+  width: 100%;
+  font-size: 16px;
+
+  display: flex;
+  justify-content: center;
+}
+
+
+.show_my_info {
+  margin: 0 auto;
+  color: #efefef;
+  background: #032429; 
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-size: 18px !important;
+  width: 100%;
+  span {
+    position: relative;
+    display: inline-block;
+    margin: 14px;
+  }
+  #showmyinfo{
+    font-size: 1.8rem;
+    padding: 24px;
+  }
+  .btn{
+    height: 48px;
+    font-size: 16px !important;
+    margin: 0 16px;
+    font-weight: 700;
+    width: 112px;
+    display: inline-block;
+  }
+}
+
+
+.clean-slide {
+  position: relative;
+  display: inline-block;
+  width: 215px;
+  padding: 10px 0 10px 15px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #ff1744;
+  background: #efefef;
+  border: 0;
+  border-radius: 3px;
+  outline: 0;
+  text-indent: 60px; // Arbitrary.
+  transition: all 0.3s ease-in-out;
+
+  &::-webkit-input-placeholder {
+    color: #efefef;
+    text-indent: 0;
+    font-weight: 300;
+  }
+
+  + label {
+    display: inline-block;
+    position: absolute;
+    transform: translateX(0);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    padding: 13px 0;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #032429;
+    text-align: left;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+    transition: all 0.3s ease-in-out, color 0.3s ease-out;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    overflow: hidden;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 100%;
+      bottom: 0;
+      width: 100%;
+      background: #ff1744;
+      z-index: -1;
+      transform: translate(0);
+      transition: all 0.3s ease-in-out;
+      border-top-left-radius: 3px;
+      border-bottom-left-radius: 3px;
+    }
+  }
+}
+.clean-slide:focus,
+.clean-slide:active {
+  color: #377d6a;
+  text-indent: 0;
+  background: #fff;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+
+  &::-webkit-input-placeholder {
+    color: #aaa;
+  }
+  + label {
+    color: #fff;
+    text-shadow: 0 1px 0 rgba(19, 74, 70, 0.4);
+    transform: translateX(-100%);
+
+    &:after {
+      transform: translate(100%);
+    }
+  }
+}

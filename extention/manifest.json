@@ -1,0 +1,29 @@
+{
+  "name": "Auto Play",
+  "description": "Auto connection  !",
+  "version": "1.0",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://finance.vietstock.vn/*"
+        
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "css/font.css",
+        "mystyle.css"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "host_permissions": [
+    "https://finance.vietstock.vn/*"
+   
+  ], 
+  "manifest_version": 3,
+  "icons": {
+    "32": "icon.png"
+  }
+}
