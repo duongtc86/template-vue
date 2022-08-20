@@ -26,7 +26,7 @@ app.get("/api/:id", function (req, res) {
     res.end();
 });
 app.get('/getck', function (req, res) {
-    res.send('doi lay data');
+    res.render("view");
     res.end();
 });
 wss.on("connection", function (ws) {
